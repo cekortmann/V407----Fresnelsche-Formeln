@@ -65,11 +65,11 @@ Es wird zuerst die Polarisation senkrecht zur Einfallsebene betrachtet. Dabei sc
 \end{figure}
 Da das Linienintegral einer geschlossenen Kurve verschwindet, ist die Tangentialkomponente des Feldstärkevektors stetig. Daraus ergibt sich
 \begin{equation*}
-    \vec{E_{\symup{e}_{\perp}}} + \vec{E_{\symup{r}_{\perp}}} = \vec{E_{\symup{d}_{\perp}}} \; .
+    \vec{E}_{\symup{e}_{\perp}} + \vec{E}_{\symup{r}_{\perp}} = \vec{E}_{\symup{d}_{\perp}} \; .
 \end{equation*}
 Aus dieser Stetigkeitsbedingung vereinfacht sich \autoref{eqn:strahlung3} zu 
 \begin{equation*}
-    \vec{E_{\symup{r}_{\perp}}} = - \vec{E_{\symup{e}_{\perp}}} \frac{\symup{ncos}\,\beta - \symup{cos}\,\alpha}{\symup{ncos}\,\beta + \symup{cos}\,\alpha} \; .
+    \vec{E}_{\symup{r}_{\perp}} = - \vec{E}_{\symup{e}_{\perp}} \frac{\symup{ncos}\,\beta - \symup{cos}\,\alpha}{\symup{ncos}\,\beta + \symup{cos}\,\alpha} \; .
 \end{equation*}
 Mithilfe des Snelliusschen Brechungsgesetzes
 \begin{equation*}
@@ -77,15 +77,52 @@ Mithilfe des Snelliusschen Brechungsgesetzes
 \end{equation*}
 erhält man die Fresnelschen Gleichungen 
 \begin{equation*}
-    \vec{E_{\symup{r}_{\perp}}} = - \vec{E_{\symup{e}_{\perp}}} \frac{\symup{sin}\left(\alpha - \beta\right)}{\symup{sin}\left(\alpha + \beta\right)}
+    \vec{E}_{\symup{r}_{\perp}} = - \vec{E}_{\symup{e}_{\perp}} \frac{\symup{sin}\left(\alpha - \beta\right)}{\symup{sin}\left(\alpha + \beta\right)}
 \end{equation*}
 und
 \begin{equation}
-    \vec{E_{\symup{r}_{\perp}}} = - \vec{E_{\symup{e}_{\perp}}} \frac{\left(\sqrt{\symup{n}^2-\symup{sin}^2 \, \alpha}-\symup{cos}\, \alpha\right)^2}{\symup{n}^2 - 1} \; .
+    \vec{E}_{\symup{r}_{\perp}} = - \vec{E}_{\symup{e}_{\perp}} \frac{\left(\sqrt{\symup{n}^2-\symup{sin}^2 \, \alpha}-\symup{cos}\, \alpha\right)^2}{\symup{n}^2 - 1} \; .
     \label{eqn:fresnelS2}
 \end{equation}
 Wenn man \autoref{eqn:fresnelS2} nach n auflöst, erhält man
 \begin{equation*}
-    n = \sqrt{1-\frac{4\vec{E_{\symup{e}_{\perp}}}\symup{cos}^2\, \alpha}{\left(\vec{E_{\symup{r}_{\perp}}}+\vec{E_{\symup{e}_{\perp}}}\right)^2}+\frac{4\vec{E_{\symup{e}_{\perp}}}\symup{cos}^2\, \alpha}{\vec{E_{\symup{r}_{\perp}}}+\vec{E_{\symup{e}_{\perp}}}}} \; .
+    n = \sqrt{1-\frac{4\vec{E}_{\symup{e}_{\perp}}\symup{cos}^2\, \alpha}{\left(\vec{E}_{\symup{r}_{\perp}}+\vec{E}_{\symup{e}_{\perp}}\right)^2}+\frac{4\vec{E}_{\symup{e}_{\perp}}\symup{cos}^2\, \alpha}{\vec{E}_{\symup{r}_{\perp}}+\vec{E}_{\symup{e}_{\perp}}}} \; .
 \end{equation*}
 
+Nun wird die parallele Polarisationsrichtung betrachtet. Dabei schwingt $\vec{E}_{\|}$ in der Einfallsebene. Dies ist in \autoref{fig:pPol} dargestellt.
+\begin{figure}
+    \centering
+    \includegraphics[height = 6cm]{pPol.pdf}
+    \caption{Reflexion eines p-polarisierten Lichtstrahls an einer Grenzfläche \cite{ap407}.}
+    \label{fig:pPol}
+\end{figure}
+$\vec{E}_{\|}$ besteht aus einer tangentialen Komponente $\vec{E}_{\| \symup{tg}}$ und einer normalen Komponente. Damit ergibt sich die Stetigkeitsbedingung 
+\begin{equation*}
+    \vec{E}_{\symup{e}\|\symup{tg}} + \vec{E}_{\symup{r}\|\symup{tg}} = \vec{E}_{\symup{d}\|\symup{tg}} \; .
+\end{equation*}
+Daraus folgt dann
+\begin{equation*}
+    \vec{E}_{\symup{r}\|} = \vec{E}_{\symup{e}\|} \frac{\symup{ncos}\, \alpha- \symup{cos}\, \beta}{\symup{ncos}\, \alpha + \symup{cos}\,\beta} \; .
+\end{equation*}
+Es ergeben sich mit dem Snelliusschen Brechungsgesetz weitere Fresnelsche Gleichungen
+\begin{equation}
+    \vec{E}_{\symup{r}\|} = - \vec{E}_{\symup{e}\|} \frac{\symup{tan}\left(\alpha - \beta\right)}{\symup{tan}\left(\alpha + \beta\right)}
+    \label{eqn:fresnelP1}
+\end{equation}
+und
+\begin{equation}
+    \vec{E}_{\symup{r}\|} = \vec{E}_{\symup{e}\|}\frac{\symup{n}^2\symup{cos}\, \alpha - \sqrt{\symup{n}^2-\symup{sin}^2\,\alpha}}{\symup{n}^2\symup{cos}\, \alpha + \sqrt{\symup{n}^2-\symup{sin}^2\,\alpha}} \; .
+    \label{eqn:fresnelP2}
+\end{equation}
+Auch diesmal kann \autoref{eqn:fresnelP2} nach n aufgelöst werden
+\begin{equation*}
+    n = \sqrt{\frac{1}{2}\left(\frac{\vec{E}_{\symup{r}\|}+\vec{E}_{\symup{e}\|}}{\vec{E}_{\symup{r}\|}-\vec{E}_{\symup{e}\|}}\frac{1}{\symup{cos}\,\alpha}\right)^2 \pm 
+    \sqrt{\frac{1}{4}\left(\frac{\vec{E}_{\symup{r}\|}+\vec{E}_{\symup{e}\|}}{\vec{E}_{\symup{r}\|}-\vec{E}_{\symup{e}\|}}\frac{1}{\symup{cos}\,\alpha}\right)^4 - 
+    \left(\frac{\vec{E}_{\symup{r}\|}+\vec{E}_{\symup{e}\|}}{\vec{E}_{\symup{r}\|}-\vec{E}_{\symup{e}\|}}\right)^2 \symup{tan}^2\, \alpha}} \; .
+\end{equation*}
+Mit \autoref{eqn:fresnelP1} wird $\vec{E}_{\symup{r}\|} = 0$ für $\alpha_{\symup{p}}+\beta_{\symup{p}} = 90°$. Mit dem Snelliusschen Brechungsgesetz
+folgt dann für den Brewsterwinkel $\alpha_{\symup{p}}$
+\begin{equation*}
+    \symup{tan}\,\alpha_{\symup{p}} = \symup{n} \; . 
+\end{equation*}
+Der Brewsterwinkel beschreibt den Einfallswinkel, bei dem der Lichtstrahl nicht mehr reflektiert wird, sondern vollständig in das Medium eindringt.
