@@ -79,7 +79,8 @@ Des Weiteren wird mit \autoref{eqn: n1} und obiger Beziehung der Brechungsindex 
 Der gemittelte Brechungsindex ergibt sich zu $\symup{n} = 4.3482$.
 
 \subsubsection{parallele Polarisation}
-Erneut wird die Intensität mittels \autoref{eqn:energie} umgerechnet. Dabei ist $I_e = 140 \, \unit{\micro\ampere}$. 
+Erneut wird die Intensität mittels \autoref{eqn:energie} umgerechnet. Dabei ist $I_e = 140 \, \unit{\micro\ampere}$. Die Messwerte sind in 
+\autoref{tab:Pol90} dargestellt.
 \begin{table}
     \centering
     \caption{Messwerte der parallelen Polarisation sowie der Brechungsindex n.}
@@ -137,6 +138,32 @@ Erneut wird die Intensität mittels \autoref{eqn:energie} umgerechnet. Dabei ist
         86 & 46 & 0.4796 & 1.4293\\
         \bottomrule
     \end{tabular}
-    \label{tab:Pol0}
+    \label{tab:Pol90}
 \end{table}
-Der MIttelwert der Brechungsindizes ergibt sich so zu $\bar{n}= 1.75$.
+Der Brechungsindex berechnet sich dabei über \autoref{eqn:n90} und wird ebenfalls in der Tabelle dargestellt. 
+Der Mittelwert der Brechungsindizes ergibt sich so zu $\bar{n}= 1.75$.
+
+Außerdem lässt sich mittels der Messung zur parallelen Polarisation der Brewsterwinkel bestimmen. Dieser befindet sich beim Minimum der 
+reflektierten Intensität und liegt somit bei $\alpha_{\symup{p}} = 76°$. Mittels \autoref{eqn:brewster} berechnet sich der Brechungsindex somit zu  
+$\symup{n} = 4.0107$.
+
+\subsection{Plot der Messwerte und Vergleich mit der Theorie}
+Um die Theoriekurven darstellen zu können wird erneut der Mittelwert aller drei gemittelten Brechungsindizes bestimmt. Damit ergibt sich 
+$\bar{\symup{n}} = 4.1795$.
+
+In \autoref{fig:plot0} wird nun $\sqrt{I/I_0}$ gegen den Einfallswinkel $\alpha$ aufgetragen. Die Theoriekurve berechnet sich durch \autoref{eqn:fresnelS2}. 
+\begin{figure}
+    \centering
+    \includegraphics[height = 10cm]{build/plot0Pol.pdf}
+    \caption{Vergleich der Messwerte mit der Theorie der senkrechten Polarisation.}
+    \label{fig:plot0}
+\end{figure}
+
+In \autoref{fig:plot90} wird $\sqrt{I/I_0}$ der parallelen Polarisation gegen den Einfallswinkel $\alpha$ aufgetragen. Die Theoriekurve berechnet sich diesmal 
+durch \autoref{eqn:fresnelP2}.
+\begin{figure}
+    \centering
+    \includegraphics[height = 10cm]{build/plot90Pol.pdf}
+    \caption{Vergleich der Messwerte mit der Theorie der parallelen Polarisation.}
+    \label{fig:plot90}
+\end{figure}

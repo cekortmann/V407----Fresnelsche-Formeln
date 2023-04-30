@@ -15,9 +15,15 @@ from uncertainties.unumpy import (nominal_values as noms,   # Wert:             
 
 a, I, E, n= np.genfromtxt('Polarisation90.txt', unpack = True, skip_header=1, skip_footer=2)
 
-plt.plot(a,np.sqrt(I/1.4*10**(-4)), 'xr', markersize = 6 , label='Messdaten', alpha=1)
+def g(n, a):
+    return  (n**2*np.cos(a)-np.sqrt(n**2-(np.sin(a))**2))/(n**2*np.cos(a)+np.sqrt(n**2-(np.sin(a))**2))
 
+xx = np.linspace(0, 90, 10**4)
+
+plt.plot(a,E, 'xr', markersize = 6 , label='Messdaten', alpha=1)
+plt.plot(xx, g(4.1975, xx*np.pi/180), '-b', linewidth = 1, label = 'Theoriekurve', alpha=0.5)
 plt.xlabel(r'$\alpha \,/ \, \mathrm{°}$')
 plt.ylabel(r'$\sqrt{(I/I_0)}$')
+plt.legend(loc="best") 
 plt.grid(True)
 plt.savefig('build/plot90Pol.pdf',bbox_inches = "tight")
