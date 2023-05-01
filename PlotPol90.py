@@ -18,10 +18,15 @@ a, I, E, n= np.genfromtxt('Polarisation90.txt', unpack = True, skip_header=1, sk
 def g(n, a):
     return  (n**2*np.cos(a)-np.sqrt(n**2-(np.sin(a))**2))/(n**2*np.cos(a)+np.sqrt(n**2-(np.sin(a))**2))
 
-xx = np.linspace(0, 90, 10**4)
+def h(n, a):
+    return  (n**2*np.cos(a)-np.sqrt(n**2-(np.sin(a))**2))/(n**2*np.cos(a)+np.sqrt(n**2-(np.sin(a))**2))*-1+1
+
+xx = np.linspace(0, 76.5, 10**4)
+xxa= np.linspace(76.6, 87, 10**4)
 
 plt.plot(a,E, 'xr', markersize = 6 , label='Messdaten', alpha=1)
 plt.plot(xx, g(4.1975, xx*np.pi/180), '-b', linewidth = 1, label = 'Theoriekurve', alpha=0.5)
+plt.plot(xxa,h(4.1975,xxa*np.pi/180)-1, '-b', linewidth = 1, alpha =0.5)
 plt.xlabel(r'$\alpha \,/ \, \mathrm{°}$')
 plt.ylabel(r'$\sqrt{(I/I_0)}$')
 plt.legend(loc="best") 
