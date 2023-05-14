@@ -23,7 +23,7 @@ xx = np.linspace(0, 90, 10**4)
 
 
 plt.plot(a,E, 'xr', markersize = 6 , label='Messdaten', alpha=1)
-plt.plot(xx, g(4.1975, xx*np.pi/180), '-b', linewidth = 1, label = 'Theoriekurve', alpha=0.5)
+plt.plot(xx, g(4.3482, xx*np.pi/180), '-b', linewidth = 1, label = 'Theoriekurve $n=4.3482$', alpha=0.5)
 plt.xlabel(r'$\alpha \,/ \, \mathrm{°}$')
 plt.ylabel(r'$\sqrt{(I/I_0)}$')
 plt.legend(loc="best") 
